@@ -1,10 +1,10 @@
 # PUSHKINS COFFEE
 
-Меню авто-кофейни и форма обратной связи. Форма сохраняет черновик, а личная ссылка открывает Telegram для подтверждения. Бот показывает статус и историю. Публикация сайта и подключение Telegram ещё не завершены. В текущей версии кнопка формы отключена.
+[Сайт PUSHKINS COFFEE](https://pushkins-coffee.pages.dev/) · [Telegram-бот @pushkinscoffeeebot](https://t.me/pushkinscoffeeebot)
 
-В отдельном [проекте Supabase Free](https://supabase.com/dashboard/project/wtuoiimwikxeuzipwvjz) применены обе миграции. В рабочей базе проверены RLS на пяти таблицах, закрытый доступ к шести RPC и отсутствие заявок перед запуском. Развёрнуты три функции с отключённой проверкой JWT только у них. Webhook и временная функция настройки отклоняют запросы без собственных секретных заголовков.
+Меню авто-кофейни и форма обратной связи. Форма сохраняет черновик, а личная ссылка открывает Telegram для подтверждения. Бот показывает статус и историю.
 
-Публичное имя бота — [@pushkinscoffeeebot](https://t.me/pushkinscoffeeebot). Рабочий приём будет доступен после регистрации webhook, проверки владельца и публикации сайта.
+Сайт развёрнут на Cloudflare Pages Free в проекте `pushkins-coffee`. В отдельном [проекте Supabase Free](https://supabase.com/dashboard/project/wtuoiimwikxeuzipwvjz) применены обе миграции. В базе проверены RLS на пяти таблицах, закрытый доступ к шести RPC и отсутствие заявок перед запуском. Telegram подтвердил webhook и доставку служебного сообщения в личный чат владельца. Проверка полного пути обращения выполняется отдельно.
 
 ## Работа в Telegram
 
@@ -27,7 +27,7 @@ npm run bundle
 
 Тесты выполняют обе SQL-миграции в PGlite и используют отдельный тестовый Telegram-транспорт. Preview открывает страницу под `/pushkins-coffee/`. Для публикации загружается только каталог `public/`. В нём `config.js` хранит только URL функции формы и публичное имя бота.
 
-Правила GitHub Pages ограничивают использование сервиса для ведения бизнеса. Workflow публикации подготовлен и имеет отдельный ручной переключатель. Для рабочего сайта кофейни площадку нужно согласовать до публикации. [Правила GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)
+Чтобы обновить сайт, загрузите ZIP с содержимым `public/` через **Create deployment** в проекте Cloudflare Pages. Сайт использует Direct Upload. GitHub хранит исходники и запускает проверки. Рабочая версия размещена на согласованной площадке Cloudflare Pages Free из-за ограничений GitHub Pages для ведения бизнеса. Workflow GitHub Pages оставлен ручным и выключен. [Правила GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)
 
 ### Подключение и обновление сервера
 
