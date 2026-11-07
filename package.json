@@ -1,0 +1,14 @@
+{
+  "name": "pushkins-coffee",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/preview.mjs",
+    "bundle": "node scripts/bundle.mjs"
+  },
+  "devDependencies": { "@electric-sql/pglite": "0.3.15" }
+}

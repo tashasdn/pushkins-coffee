@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Меню авто-кофейни PUSHKINS COFFEE и форма обратной связи.">
+  <title>PUSHKINS COFFEE — меню и обратная связь</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./config.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<header class="header wrap">
+  <a class="brand" href="./" aria-label="PUSHKINS COFFEE, главная">
+    <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#ffb42b"/><path d="M11 14h18l-3 17H14zM9 14h22M13 10h14M13 20h14" fill="none" stroke="#171513" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>PUSHKINS<br>COFFEE</span>
+  </a>
+  <nav aria-label="Разделы страницы"><a href="#how">Как это работает</a><a href="#menu">Меню</a></nav>
+</header>
+<main class="wrap">
+  <div class="layout">
+    <div>
+      <section class="hero">
+        <p class="eyebrow"><span></span> АВТО-КОФЕЙНЯ · КОФЕ С СОБОЙ</p>
+        <h1>Кофе в дорогу.<br><em>Мы на связи.</em></h1>
+        <p class="intro">Есть вопрос по меню, пожелание или отзыв о визите? Напишите нам. Ответ придёт в Telegram после подтверждения обращения в боте.</p>
+        <a class="menu-link" href="#menu">Посмотреть меню <span aria-hidden="true">↓</span></a>
+      </section>
+      <section id="how" class="steps">
+        <h2>Как это работает</h2>
+        <ol>
+          <li><span class="number">01</span><div><strong>Заполните форму</strong><p>Укажите имя, тему и опишите ваш вопрос.</p></div></li>
+          <li><span class="number">02</span><div><strong>Подтвердите в Telegram</strong><p>Откройте бота по личной ссылке и нажмите «Запустить».</p></div></li>
+          <li><span class="number">03</span><div><strong>Получите ответ в чате</strong><p>Там же можно посмотреть историю и добавить уточнение.</p></div></li>
+        </ol>
+      </section>
+    </div>
+    <section class="card" aria-labelledby="form-title">
+      <div id="form-screen">
+        <p class="eyebrow">ОБРАТНАЯ СВЯЗЬ</p>
+        <h2 id="form-title">Напишите нам</h2>
+        <p class="sub">Все три поля обязательны.</p>
+        <form id="application">
+          <label for="name">Ваше имя</label>
+          <input id="name" name="name" required autocomplete="given-name" placeholder="Как к вам обращаться?" aria-describedby="name-count">
+          <small id="name-count" class="count">0 / 80</small>
+          <label for="subject">Тема</label>
+          <input id="subject" name="subject" required placeholder="Например, вопрос по меню" aria-describedby="subject-count">
+          <small id="subject-count" class="count">0 / 120</small>
+          <label for="description">Описание</label>
+          <textarea id="description" name="description" required rows="4" placeholder="Расскажите подробнее" aria-describedby="description-count privacy"></textarea>
+          <small id="description-count" class="count">0 / 2000</small>
+          <div class="trap" aria-hidden="true" inert><label for="website">Оставьте пустым</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <p id="privacy" class="note">Имя и текст обращения будут сохранены и переданы владельцу кофейни в Telegram. Не указывайте пароли, платёжные реквизиты и другие конфиденциальные данные.</p>
+          <p id="status" role="status">Приём обращений пока не настроен.</p>
+          <button class="primary" disabled>Продолжить в Telegram <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+      <div id="confirmation" hidden>
+        <p class="eyebrow">ПОСЛЕДНИЙ ШАГ</p>
+        <h2 id="confirm-title" tabindex="-1">Подтвердите обращение в боте</h2>
+        <p>Откройте Telegram и нажмите «Запустить». Бот подтвердит обращение и сообщит его номер.</p>
+        <p class="note" id="expiry"></p>
+        <a class="primary" id="telegram-link" rel="noreferrer">Открыть бота ↗</a>
+        <button class="back" type="button">Вернуться к форме</button>
+      </div>
+    </section>
+  </div>
+  <section class="menu" id="menu">
+    <div><p class="eyebrow">PUSHKINS COFFEE</p><h2>Меню авто-кофейни</h2></div>
+    <a class="menu-link" href="./menu.jpg">Открыть в полном размере ↗</a>
+    <img src="./menu.jpg" loading="lazy" width="1672" height="2381" alt="Меню авто-кофейни PUSHKINS COFFEE. Классический и сладкий кофе, чай, какао, напитки и стритфуд.">
+  </section>
+</main>
+<footer class="wrap">PUSHKINS COFFEE <span>Авто-кофейня</span></footer>
+</body>
+</html>

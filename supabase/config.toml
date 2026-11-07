@@ -1,0 +1,7 @@
+project_id = "pushkins-coffee"
+[functions.create-application]
+verify_jwt = false
+[functions.telegram-hook]
+verify_jwt = false
+[functions.setup-telegram]
+verify_jwt = false
